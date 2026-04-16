@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="text-center py-5 bg-light">
+    <h1 class="fw-bold display-5">Discover Your Next Favorite Book 📚</h1>
+    <p class="lead text-muted">
+        Explore best sellers, trending titles, and books that inspire your journey.
+    </p>
+    <a class="btn btn-dark btn-lg me-2" href="{% url 'books' %}">Shop Now</a>
+    <a class="btn btn-outline-dark btn-lg" href="{% url 'books' %}">Explore Collection</a>
+</div>
+
+<div class="bg-dark text-white text-center py-2">
+    <p class="mb-0">🔥 Special Offer: Get 20% off on selected books this week!</p>
+</div>
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Best Sellers</h2>
+        <p class="text-muted">Top picks loved by our readers</p>
+    </div>
+
+    <div class="row">
+        {% if bestbook %}
+            {% for best in bestbook %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        {% if best.book_img %}
+                            <img src="{{ best.book_img.url }}" class="card-img-top" style="height: 280px; object-fit: cover;" alt="{{ best.book_name }}">
+                        {% else %}
+                            <img src="{% static 'images/default-book.png' %}" class="card-img-top" style="height: 280px; object-fit: cover;" alt="Default Book Image">
+                        {% endif %}
+
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ best.book_name }}</h5>
+                            <p class="card-text text-success fw-bold">₹ {{ best.price }}</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="text-center">No best seller books available.</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row text-center">
+        <div class="col-md-4 mb-3">
+            <h4>🚚 Fast Delivery</h4>
+            <p class="text-muted">Get your favorite books delivered quickly to your doorstep.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+            <h4>📚 Wide Collection</h4>
+            <p class="text-muted">Choose from a variety of genres, authors, and best sellers.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+            <h4>💳 Easy Shopping</h4>
+            <p class="text-muted">Simple and secure shopping experience for every reader.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

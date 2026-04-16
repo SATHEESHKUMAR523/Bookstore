@@ -1,0 +1,44 @@
+/* Register Card */
+.register-card {
+    width: 400px;
+    background: white;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.register-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Inputs */
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Button */
+.register-btn {
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #222;
+    transform: scale(1.03);
+}
+
+/* Login link */
+.login-link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link:hover {
+    color: #000;
+}
+
+.error{
+    color:red;
+}

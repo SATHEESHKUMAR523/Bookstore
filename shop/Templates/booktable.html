@@ -1,0 +1,27 @@
+{% extends 'admin.html' %}
+{% block content %}
+{% load static %}
+
+ {% block extra_css %}<link rel="stylesheet" href="{% static 'css/booktable.css' %}"> {% endblock %}
+
+<table>
+    <thead>
+
+        <th>Book name</th>
+        <th>price</th>
+        <th>Action</th>
+    </thead>
+
+    <tbody>
+     {% for book in books %}
+     <tr>
+        <td>{{book.title}}</td>
+        <td>{{book.price}}</td>
+        <td><a href="{% url 'updatebook' book.id  %}"><button>edit</button></a><a href="{% url 'deletebook' book.id %}"><button>delete</button></a></td>
+     </tr>
+     
+    </tbody>
+    {% endfor %}
+</table>
+
+{% endblock %}

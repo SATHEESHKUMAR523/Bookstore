@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="py-5 text-white" style="background: linear-gradient(135deg, #1e1e2f, #343a40);">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <span class="badge bg-warning text-dark mb-3 px-3 py-2">Welcome to Our Bookstore</span>
+                <h1 class="display-4 fw-bold mb-3">Where Every Book Opens a New World</h1>
+                <p class="lead mb-4">
+                    We are more than just a bookstore. We are a home for readers, dreamers, and lifelong learners.
+                    Our mission is to bring stories, knowledge, and inspiration closer to every reader.
+                </p>
+                <a href="{% url 'books' %}" class="btn btn-warning btn-lg px-4 me-2">Explore Books</a>
+                <a href="#our-story" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
+                     alt="Bookstore"
+                     class="img-fluid rounded-4 shadow-lg"
+                     style="max-height: 400px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Story -->
+<section id="our-story" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794"
+                     alt="Our Story"
+                     class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-3">Our Story</h2>
+                <p class="text-muted">
+                    Founded in 2004, our bookstore began with one simple dream:
+                    to create a place where readers could discover books that truly matter.
+                    Over the years, we have grown into a trusted destination for book lovers of all ages.
+                </p>
+                <p class="text-muted">
+                    From timeless classics to modern bestsellers, we carefully curate our collection
+                    to make sure every visitor finds something meaningful, inspiring, and memorable.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission, Vision, Values -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">What Drives Us</h2>
+            <p class="text-muted">Our purpose, direction, and values that shape every page we share.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card border-0 shadow h-100 rounded-4">
+                    <div class="card-body p-4 text-center">
+                        <div class="fs-1 mb-3">🎯</div>
+                        <h4 class="fw-bold">Mission</h4>
+                        <p class="text-muted">
+                            To provide a carefully selected range of books that educate, inspire,
+                            and entertain readers everywhere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow h-100 rounded-4">
+                    <div class="card-body p-4 text-center">
+                        <div class="fs-1 mb-3">🌍</div>
+                        <h4 class="fw-bold">Vision</h4>
+                        <p class="text-muted">
+                            To become a trusted reading community where stories connect people,
+                            ideas grow, and imagination thrives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow h-100 rounded-4">
+                    <div class="card-body p-4 text-center">
+                        <div class="fs-1 mb-3">💡</div>
+                        <h4 class="fw-bold">Values</h4>
+                        <p class="text-muted">
+                            Passion for reading, honest recommendations, quality service,
+                            and creating joy through books.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-5 text-white" style="background: linear-gradient(135deg, #212529, #495057);">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                <h2 class="fw-bold">10K+</h2>
+                <p class="mb-0">Books Available</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="fw-bold">5K+</h2>
+                <p class="mb-0">Happy Readers</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="fw-bold">20+</h2>
+                <p class="mb-0">Years of Trust</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="fw-bold">100%</h2>
+                <p class="mb-0">Love for Books</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Why Choose Us</h2>
+            <p class="text-muted">What makes our bookstore special for every reader.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded-4 text-center h-100">
+                    <div class="fs-1 mb-3">📚</div>
+                    <h5 class="fw-bold">Wide Selection</h5>
+                    <p class="text-muted mb-0">Explore thousands of books across fiction, non-fiction, academics, and more.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded-4 text-center h-100">
+                    <div class="fs-1 mb-3">🚚</div>
+                    <h5 class="fw-bold">Fast Delivery</h5>
+                    <p class="text-muted mb-0">Get your favorite books delivered quickly and safely to your doorstep.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded-4 text-center h-100">
+                    <div class="fs-1 mb-3">⭐</div>
+                    <h5 class="fw-bold">Trusted by Readers</h5>
+                    <p class="text-muted mb-0">Real reviews, reader favorites, and quality recommendations you can trust.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center p-5 rounded-4 shadow-lg text-white"
+             style="background: linear-gradient(135deg, #6f42c1, #d63384);">
+            <h2 class="fw-bold mb-3">Start Your Reading Journey With Us</h2>
+            <p class="lead mb-4">
+                Discover books that inspire, teach, and entertain.
+                Your next favorite book is waiting for you.
+            </p>
+            <a href="{% url 'books' %}" class="btn btn-light btn-lg px-4 fw-bold">Shop Now</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

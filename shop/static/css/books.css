@@ -1,0 +1,63 @@
+/* =========================
+   BOOK LIST PAGE STYLES
+========================= */
+
+/* Card */
+.book-card{
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* Hover effect */
+.book-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.14);
+}
+
+/* Image (fix full card issue) */
+.book-card .card-img-top{
+  width: 100%;
+  height: 100%;        /* important: fixed height */
+  object-fit: cover;    /* crop nicely */
+  background: #f3f3f3;
+}
+
+/* Body spacing */
+.book-card .card-body{
+  padding: 16px 16px 18px;
+}
+
+/* Title (keep equal height rows) */
+.book-card .card-title{
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+  min-height: 44px;   /* keeps cards equal even if title is short */
+  margin-bottom: 10px;
+}
+
+/* Author */
+.book-card .text-muted{
+  font-size: .92rem;
+}
+
+/* Price */
+.book-card .fw-bold{
+  font-size: 1.1rem;
+  margin-top: 6px;
+}
+
+/* Buttons */
+.book-card .btn{
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: .85rem;
+}
+
+/* Make the form button align same as others */
+.book-card form{
+  margin: 0;
+}
